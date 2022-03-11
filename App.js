@@ -18,13 +18,15 @@ import {
 
 } from 'react-native';
 import Post from './src/components/Post';
+import SearchResults from './src/screens/SearchResults';
 
 const App: () => Node = () => {
 
 
   return (
     <SafeAreaView >
-        <Post post={feed[0]}/>
+      <SearchResults/>
+
     </SafeAreaView>
   );
 };

@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, ImageBackground } from 'react-native'
 import React from 'react'
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable'
 import Fontisto from "react-native-vector-icons/Fontisto"
+
 const Home = () => {
   return (
     <View>  
