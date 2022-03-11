@@ -16,13 +16,14 @@ import {
   StyleSheet,
 
 } from 'react-native';
+import Post from './src/components/Post';
 
 const App: () => Node = () => {
 
 
   return (
     <SafeAreaView >
-        <Home/>
+        <Post/>
     </SafeAreaView>
   );
 };
