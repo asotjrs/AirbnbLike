@@ -9,7 +9,8 @@
 import React from 'react';
 import {Text} from "react-native"
 import type {Node} from 'react';
-import Home from './src/screens/Home';
+import feed from "./assets/data/feed"
+
 import {
   SafeAreaView,
 
@@ -23,7 +24,7 @@ const App: () => Node = () => {
 
   return (
     <SafeAreaView >
-        <Post/>
+        <Post post={feed[0]}/>
     </SafeAreaView>
   );
 };

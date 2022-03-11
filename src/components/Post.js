@@ -1,21 +1,21 @@
 import { StyleSheet, Text, View ,Image} from 'react-native'
 import React from 'react'
 
-const Post = () => {
+const Post = ({post}) => {
+  console.log("post =======>",post)
+  const {bed,bedroom,coordinate,id,image, newPrice, oldPrice, title, totalPrice, type}=post;
   return (
     <View style={styles.container}>
-        <Image style={styles.image} source={{uri:"https://shorttermrentalz.com/wp-content/uploads/2020/07/airbnb-staycation.jpg"}}/>
-        <Text style={styles.bedrooms}>1 bed 1 bedroom</Text>
-        <Text style={styles.description} numberOfLines={2}>lorem ipsum bla doing hsnd bfhgn snns d nfbs shfnsh c dnnsbns nsbdbfhr  sbdd
-        lorem ipsum bla doing hsnd bfhgn snns d nfbs shfnsh c dnnsbns nsbdbfhr  sbdd
-        lorem ipsum bla doing hsnd bfhgn snns d nfbs shfnsh c dnnsbns nsbdbfhr  sbdd
+        <Image style={styles.image} source={{uri:image}}/>
+        <Text style={styles.bedrooms}>{bed} bed {bedroom} bedroom</Text>
+        <Text style={styles.description} numberOfLines={2}>{type}. {title}
         </Text>
         <Text style={styles.priceContainer}>
-        <Text  style={styles.oldPrice}> 33£</Text>
-        <Text  style={styles.price}> 22£ </Text>
+        <Text  style={styles.oldPrice}>{oldPrice}£</Text>
+        <Text  style={styles.price}>  {newPrice}£ </Text>
         <Text  style={styles.duration}>/ month</Text>
         </Text>
-        <Text style={styles.totalPrice}> 37 £  total</Text>
+        <Text style={styles.totalPrice}>{totalPrice} £  total</Text>
 
     </View>
   )
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
       flexDirection:'row',
       fontSize:20,
       fontWeight:'bold',
-      marginVertical:10
+      marginTop:10
 
     },
     oldPrice:{
