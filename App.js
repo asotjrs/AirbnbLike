@@ -19,13 +19,14 @@ import {
 } from 'react-native';
 import Post from './src/components/Post';
 import SearchResults from './src/screens/SearchResults';
+import DestinationSearch from './src/screens/DestinationSearch';
 
 const App: () => Node = () => {
 
 
   return (
     <SafeAreaView >
-      <SearchResults/>
+      <DestinationSearch/>
 
     </SafeAreaView>
   );
